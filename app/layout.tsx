@@ -19,7 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="es">
       <body>
-        {/* Soft lime patches spread down the page so every section has some colour behind its glass. */}
+        {/* Soft coral patches spread down the page so every section has some colour behind its glass. */}
         <div aria-hidden className="ambient">
           <span />
           <span />

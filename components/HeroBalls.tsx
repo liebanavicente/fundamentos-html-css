@@ -5,12 +5,12 @@ import { useEffect, useRef } from "react";
 type Ball = { x: number; y: number; vx: number; vy: number; r: number; fill: [number, number, number] };
 type Rect = { left: number; top: number; right: number; bottom: number };
 
-// Lime tones as [r, g, b]; each ball is a soft glow that fades out towards its edge.
+// Coral tones as [r, g, b]; each ball is a soft glow that fades out towards its edge.
 const FILLS: Array<[number, number, number]> = [
-  [215, 255, 0],
-  [232, 255, 92],
-  [198, 238, 0],
-  [242, 255, 158],
+  [255, 90, 95],
+  [255, 130, 120],
+  [240, 70, 80],
+  [255, 172, 160],
 ];
 const MAX_DT = 1 / 30;
 const POINTER_RADIUS = 120;
@@ -135,7 +135,7 @@ function collide(a: Ball, b: Ball) {
   b.vy += impulse * ma * ny;
 }
 
-/** Soft lime glows drifting behind the home heading, bouncing off each other, the edges and the words. */
+/** Soft coral glows drifting behind the home heading, bouncing off each other, the edges and the words. */
 export function HeroBalls() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 

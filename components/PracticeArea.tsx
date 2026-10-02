@@ -47,7 +47,7 @@ export const TEMPLATES: Array<{ id: string; label: string; code: Code }> = [
 }
 
 .tarjeta a {
-  color: #4f6b00;
+  color: #c1121f;
   font-weight: bold;
 }`,
     },
@@ -80,7 +80,7 @@ export const TEMPLATES: Array<{ id: string; label: string; code: Code }> = [
 }
 
 .cabecera a {
-  color: #d7ff00;
+  color: #ff8a8f;
 }`,
     },
   },

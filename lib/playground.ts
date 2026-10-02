@@ -13,7 +13,7 @@ document.addEventListener("submit", (event) => {
   if (!box) {
     box = document.createElement("div");
     box.id = "__envio";
-    box.style.cssText = "position:fixed;left:8px;right:8px;bottom:8px;padding:10px 12px;border:2px solid #111;border-radius:10px;background:#d7ff00;color:#111;font:14px/1.4 system-ui,sans-serif;white-space:pre-wrap;z-index:2147483647";
+    box.style.cssText = "position:fixed;left:8px;right:8px;bottom:8px;padding:10px 12px;border:2px solid #111;border-radius:10px;background:#ff5a5f;color:#111;font:14px/1.4 system-ui,sans-serif;white-space:pre-wrap;z-index:2147483647";
     box.onclick = () => box.remove();
     document.body.append(box);
   }

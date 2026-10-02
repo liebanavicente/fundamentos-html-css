@@ -25,7 +25,7 @@ export function Navigation() {
   const [openOn, setOpenOn] = useState<string | null>(null);
   const menuOpen = openOn === pathname;
 
-  /** Slides the lime block under a link; without a target it rests on the current page. */
+  /** Slides the coral block under a link; without a target it rests on the current page. */
   const moveIndicator = useCallback((target?: HTMLElement | null) => {
     const list = listRef.current;
     const indicator = indicatorRef.current;
