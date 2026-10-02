@@ -23,6 +23,9 @@
   --radius-lg: 20px;
   --radius-md: 12px;
   --danger: #b42318;
+  /* Right answers and finished work stay green: the coral accent would read as an error. */
+  --success: #15803d;
+  --success-soft: #dcfce7;
 }
 
 * { box-sizing: border-box; }
@@ -814,14 +817,15 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .quiz-option:hover:not(:disabled) { border-color: var(--accent-ink); background: rgba(255, 90, 95, 0.35); transform: translateY(-1px); }
 .quiz-option:disabled { cursor: default; }
 .quiz-letter { display: inline-flex; width: 34px; height: 34px; align-items: center; justify-content: center; border: 1px solid var(--hairline); border-radius: 10px; background: white; font-weight: 800; }
-.quiz-option.is-correct { border-color: var(--accent-ink); background: rgba(255, 90, 95, 0.8); animation: count-pop 320ms var(--ease-out); }
-.quiz-option.is-correct svg { color: var(--accent-ink); }
+.quiz-option.is-correct { border-color: var(--success); background: var(--success-soft); animation: count-pop 320ms var(--ease-out); }
+.quiz-option.is-correct svg { color: var(--success); }
 .quiz-option.is-wrong { border-color: var(--danger); background: #fdecea; animation: shake 320ms ease; }
 .quiz-option.is-wrong svg { color: var(--danger); }
 .quiz-option.is-dim { opacity: 0.5; }
 @keyframes shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
 .quiz-feedback { display: grid; justify-items: start; gap: 8px; border-radius: 14px; padding: 16px 18px; animation: row-in 260ms var(--ease-out) both; }
-.quiz-feedback.right { border-left: 6px solid var(--accent-strong); background: rgba(255, 90, 95, 0.25); }
+.quiz-feedback.right { border-left: 6px solid var(--success); background: var(--success-soft); }
+.quiz-feedback.right > strong { color: var(--success); }
 .quiz-feedback.wrong { border-left: 6px solid var(--danger); background: #fdecea; }
 .quiz-feedback p { margin: 0; line-height: 1.5; }
 .quiz-feedback .button { margin-top: 4px; }
@@ -1139,7 +1143,7 @@ input:focus-visible, select:focus-visible, textarea:focus-visible {
 .task-card-copy { display: grid; gap: 4px; min-width: 0; }
 .task-card-copy strong { overflow: hidden; font-size: 1.1rem; text-overflow: ellipsis; white-space: nowrap; }
 .task-card-copy .muted { margin: 0; text-transform: none; letter-spacing: 0; font-weight: 550; }
-.badge.task-ready { background: var(--accent); }
+.badge.task-ready { border-color: var(--success); background: var(--success-soft); color: var(--success); }
 
 .manual { display: grid; gap: 28px; }
 .manual-progress { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid var(--hairline); border-radius: var(--radius-lg); background: var(--glass-strong); padding: 18px 22px; }
